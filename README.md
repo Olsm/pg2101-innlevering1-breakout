@@ -25,6 +25,7 @@
 * Lag ny branch ved arbeid på den "feature" du jobber på, slik at flere kan jobbe samtidig. Når endringen er ferdig kan du oppdatere master branch med merge.
 * Master branch skal alltid være en fungerende versjon av spillet.
 * Du må alltid teste grundig før oppdatering av master branch.
+* Skriv dokumentasjon på Wiki-repository.
 
 ### Who do I talk to? ###
 
