@@ -16,7 +16,7 @@ public class GameController : MonoBehaviour {
 	private GameObject guiT;
 	private GameObject destroyBrickSound;
 
-	// Use this for initialization
+	// Use this for initialization/starup
 	IEnumerator Start () {
 		score = 0;
 		lives = 3;
