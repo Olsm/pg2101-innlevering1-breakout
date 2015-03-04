@@ -36,6 +36,7 @@ public class GameController : MonoBehaviour {
 	// Update is called once per frames
 	void Update () {
 
+
 	}
 
 	void FixedUpdate () {
@@ -109,7 +110,7 @@ public class GameController : MonoBehaviour {
 		guiT.guiText.text = "";
 
 		if (lives == 0) 
-			Application.LoadLevel (Application.loadedLevelName);
+			Application.LoadLevel ("Menu");
 		else {
 			lives--;
 			transform.position = new Vector3(0, 0, 2);;
@@ -124,15 +125,19 @@ public class GameController : MonoBehaviour {
 		guiT = GameObject.Find ("GameStatus");
 		guiT.guiText.text = "You Won!";
 		Destroy (gameObject);
+		Application.LoadLevel("Menu");
 	}
 
 	IEnumerator PauseCoroutine() {
 	
 		while (true) {
 			if(Input.GetKeyDown(KeyCode.P)) {
+				audio.Pause();
 
 			if(Time.timeScale == 0){
 					Time.timeScale = 1;
+						audio.Play();
+
 				}else {
 					Time.timeScale = 0;
 				}	
