@@ -17,6 +17,8 @@ public class GameController : MonoBehaviour {
 	private GameObject destroyBrickSound;
 
 	// Use this for initialization
+
+		
 	IEnumerator Start () {
 		score = 0;
 		lives = 3;
@@ -28,6 +30,7 @@ public class GameController : MonoBehaviour {
 		transform.eulerAngles = new Vector3 (0, Random.Range (-60,60), 0);
 		rigidbody.velocity = new Vector3 (speed,0,speed);
 		audio.Play(); // start music
+		StartCoroutine(PauseCoroutine());
 	}
 
 	// Update is called once per frames
@@ -122,4 +125,20 @@ public class GameController : MonoBehaviour {
 		guiT.guiText.text = "You Won!";
 		Destroy (gameObject);
 	}
+
+	IEnumerator PauseCoroutine() {
+	
+		while (true) {
+			if(Input.GetKeyDown(KeyCode.P)) {
+
+			if(Time.timeScale == 0){
+					Time.timeScale = 1;
+				}else {
+					Time.timeScale = 0;
+				}	
+			}
+			yield return null;
+		}
+	}
 }
+
