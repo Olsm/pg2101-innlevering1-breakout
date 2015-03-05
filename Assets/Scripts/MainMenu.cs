@@ -16,6 +16,7 @@ public class MainMenu : MonoBehaviour {
 
 			// On Click, load the first level.
 			Application.LoadLevel("Scene1");
+			audio.Play();
 		}
 	}
 }

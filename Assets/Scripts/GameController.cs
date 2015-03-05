@@ -120,7 +120,7 @@ public class GameController : MonoBehaviour {
 	}
 
 	void GameWon() {
-		player.audio.PlayDelayed (0.5f); // pause 0.5 seconds before playing audio
+		player.audio.PlayDelayed (1.0f); // pause 0.5 seconds before playing audio
 		guiT = GameObject.Find ("GameStatus");
 		guiT.guiText.text = "You Won!";
 
