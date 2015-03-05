@@ -123,7 +123,8 @@ public class GameController : MonoBehaviour {
 		player.audio.PlayDelayed (0.5f); // pause 0.5 seconds before playing audio
 		guiT = GameObject.Find ("GameStatus");
 		guiT.guiText.text = "You Won!";
-		Destroy (gameObject);
+
+		Application.LoadLevel ("Menu");
 	}
 
 	IEnumerator PauseCoroutine() {
