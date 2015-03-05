@@ -80,7 +80,7 @@ public class GameController : MonoBehaviour {
 
 			// If there are no bricks left player has won
 			if (numBricks == 0) {
-				GameWon();
+				StartCoroutine (GameWon ());
 			}
 		}
 		if (col.gameObject.name == "TopWall") {
@@ -119,12 +119,14 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
-	void GameWon() {
-		player.audio.PlayDelayed (1.0f); // pause 0.5 seconds before playing audio
+	IEnumerator GameWon() {
+		player.audio.PlayDelayed (0.5f); // pause 0.5 seconds before playing audio
 		guiT = GameObject.Find ("GameStatus");
 		guiT.guiText.text = "You Won!";
 
-		Application.LoadLevel ("Menu");
+		rigidbody.velocity = Vector3.zero;
+		yield return new WaitForSeconds(2);
+		Application.LoadLevel("Menu");
 	}
 
 	IEnumerator PauseCoroutine() {
