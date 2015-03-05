@@ -109,7 +109,7 @@ public class GameController : MonoBehaviour {
 		guiT.guiText.text = "";
 
 		if (lives == 0) 
-			Application.LoadLevel (Application.loadedLevelName);
+			Application.LoadLevel("GameOverMenu");
 		else {
 			lives--;
 			transform.position = new Vector3(0, 0, 2);;

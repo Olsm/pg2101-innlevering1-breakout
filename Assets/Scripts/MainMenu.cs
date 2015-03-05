@@ -5,7 +5,7 @@ public class MainMenu : MonoBehaviour {
 
 	void OnGUI () {
 
-		const int buttonWidth = 84;
+		const int buttonWidth = 120;
 		const int buttonHeight = 60;
 		
 		// Determine the button's place on screen
