@@ -130,9 +130,12 @@ public class GameController : MonoBehaviour {
 	
 		while (true) {
 			if(Input.GetKeyDown(KeyCode.P)) {
+				audio.Pause();
 
 			if(Time.timeScale == 0){
 					Time.timeScale = 1;
+				audio.Play();
+
 				}else {
 					Time.timeScale = 0;
 				}	
