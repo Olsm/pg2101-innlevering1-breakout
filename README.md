@@ -1,5 +1,7 @@
 # Readme for PG2101-Innlevering1:breakout #
 
+![Preview.png](https://bitbucket.org/repo/EzEk8j/images/2612193941-Preview.png)
+
 Dokumentasjonen er tilgjengelig i master branch som Dokumentasjon.pdf, i Wiki, og på google docs.
 
 ### What is this repository for? ###
