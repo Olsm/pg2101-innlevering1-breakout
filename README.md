@@ -1,5 +1,7 @@
 # Readme for PG2101-Innlevering1:breakout #
 
+Dokumentasjonen er tilgjengelig i master branch som Dokumentasjon.pdf, i Wiki, og på google docs.
+
 ### What is this repository for? ###
 
 * Dette repository er til innlevering 1 i faget PG2101 unity utvikling.
